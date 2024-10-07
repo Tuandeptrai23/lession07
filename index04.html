@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap</title>
+</head>
+<body>
+    <script>
+        // co phuong trinh a*x + b=0;
+        // Viet phuong trinh bien luan nghiem x
+        // Nhap gia tri tu man hinh
+        // In nghiem ra ngoai man hinh
+        var a,b;
+        a=parseInt(prompt("Nhap gia tri a:"));
+        b=parseInt(prompt("Nhap gia tri b:"));
+        if(a==0){
+            if(b==0){
+                document.writeln("Phuong trinh co vo so nghiem")
+            }else{
+                document.writeln("Phuong trinh vo nghiem")
+            }
+        }else{
+            let x = (-b/a);
+            document.writeln("Phuong trinh co nghiem duy nhat x = ",x);
+        }
+
+        // Co phuong trinh bac 2 : a*x^2 + b*x + c =0
+        // Viet phuong trinh bien luan nghiem x
+        // Nhap gia tri tu man hinh
+        // Co the su dung function
+        // In nghiem ra ngoai man hinh
+
+
+        // Cho một mảng arr = [1,5,6,9,9,4,5,5,6,7,6]
+        // 1.in ra man hinh mảng trên
+        // 2.hiển thị các số trong mảng có 2 lần xuất hiện
+        // 3.Đếm số lần xuất hiện của các số đó
+        var arr = [1,5,6,9,9,4,5,5,6,7,6];
+        document.writeln("mang arr :")
+        for(let i=0;i<arr.length;i++){
+            document.writeln(arr[i],",")
+        }
+        document.writeln("<br>Mang arr.sort():")
+        arr.sort();
+        for(let i=0;i<arr.length;j++){
+            if(arr[i]==arr[j]){
+                document.writeln(arr[i],",");
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ptb1(){
+        //cho phép người dùng nhập vào các a,b,c
+        var so_a=prompt("Nhap a");
+        var so_b=prompt("Nhap b");
+        var so_c=prompt("Nhap c");
+        //kiem tra so a
+        if(a==0)
+    {
+        //goi den function giai ptb1()
+        ptb1(so_b,so_c);
+    }else
+    {
+        ptb2(so_a,so_b,so_c);
+    }
+        if(b==0){
+            if(c==0)
+            {
+                document.writeln("Phuong trinh vo so nghiem");
+            }else
+            {
+                document.writeln("Phuong trinh vo nghiem");
+            }
+        }else
+        {
+            nghiem = -b/c;
+            document.writeln("phuong trinh co nghiem la : "+nghiem);
+        }
+    }
+    </script>
+     <h1>Giải Phương Trình Bậc Hai</h1>
+ 
+     <label for="a">Nhập a:</label>
+     <input type="number" id="a"><br><br>
+     
+     <label for="b">Nhập b:</label>
+     <input type="number" id="b"><br><br>
+     
+     <label for="c">Nhập c:</label>
+     <input type="number" id="c"><br><br>
+     
+     <button onclick="ptb1()">Tính nghiệm</button>
+     
+     <h2>Kết quả:</h2>
+     <p id="result"></p>
+</body>
+</html>

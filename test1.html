@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Phương Trình Bậc Nhất</title>
+    <script>
+        function solveEquation() {
+            // Lấy giá trị a và b từ input
+            const a = parseFloat(document.getElementById("a").value);
+            const b = parseFloat(document.getElementById("b").value);
+            let result;
+
+            // Kiểm tra giá trị của a
+            if (a === 0) {
+                if (b === 0) {
+                    result = "Phương trình có vô số nghiệm.";
+                } else {
+                    result = "Phương trình vô nghiệm.";
+                }
+            } else {
+                // Tính nghiệm
+                const x = -b / a;
+                result = `Nghiệm của phương trình ${a}x + ${b} = 0 là: x = ${x}`;
+            }
+
+            // Hiển thị kết quả
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Giải Phương Trình Bậc Nhất</h1>
+    <label for="a">Nhập giá trị a:</label>
+    <input type="number" id="a" step="any"><br><br>
+    
+    <label for="b">Nhập giá trị b:</label>
+    <input type="number" id="b" step="any"><br><br>
+    
+    <button onclick="solveEquation()">Tính nghiệm</button>
+    
+    <h2>Kết quả:</h2>
+    <p id="result"></p>
+</body>
+</html>

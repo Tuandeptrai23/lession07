@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Phương Trình Bậc Hai</title>
+</head>
+<body>
+    <h1>Giải Phương Trình Bậc Hai</h1>
+    
+    <label for="a">Nhập a:</label>
+    <input type="number" id="a"><br><br>
+    
+    <label for="b">Nhập b:</label>
+    <input type="number" id="b"><br><br>
+    
+    <label for="c">Nhập c:</label>
+    <input type="number" id="c"><br><br>
+    
+    <button onclick="solveQuadratic()">Tính nghiệm</button>
+    
+    <h2>Kết quả:</h2>
+    <p id="result"></p>
+
+    <script>
+        function solveQuadratic() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+            var result;
+
+            // Kiểm tra a có khác 0 không
+            if (a === 0) {
+                result = "Đây không phải là phương trình bậc hai.";
+            } else {
+                // Tính discriminant (Delta)
+                var delta = b * b - 4 * a * c;
+
+                if (delta > 0) {
+                    // Hai nghiệm phân biệt
+                    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    result = `Hai nghiệm phân biệt: x1 = ${x1}, x2 = ${x2}`;
+                } else if (delta === 0) {
+                    // Một nghiệm kép
+                    var x = -b / (2 * a);
+                    result = `Nghiệm kép: x = ${x}`;
+                } else {
+                    // Không có nghiệm thực
+                    result = "Phương trình không có nghiệm thực.";
+                }
+            }
+
+            // Hiển thị kết quả
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ì:
+        if(5>4){
+            document.write("5>4 la dung")
+        }
+        // if else
+        // var number1 = prompt("Nhap gia tri number1");
+        // var number2 = prompt("Nhap gia tri number2");
+        // console.log("number1:".parseInt(number1));
+        // console.log("number2:".parseInt(number2))
+        // document.write("number1:",number1,"<br>")
+        // document.write("number2:",number2,"<br>")
+        // if(parseInt(number1)>parseInt(number2)){
+            // document.write("number1>number2 <br>");
+        // }else{
+            // document.write("number2>number1 <br>");
+        // }
+
+
+        // 
+
+        // function soLonSoBe(a,b){
+            // document.write("number1:",number1,"<br>");
+            // document.write("number2:",number2,"<br>");
+        // if(parseInt(number1)>parseInt(number2)){
+            // document.write("number1>number2 <br>");
+        // }else{
+            // document.write("number2>number1 <br>");
+        // }
+        // }
+        soLonSoBe(number1,number2);
+
+        var number1,number2;
+        var kt = true;
+        // do{
+            // var number1 = prompt("Nhap gia tri number1");
+            // var number2 = prompt("Nhap gia tri number2");
+            // soLonSoBe(number1,number2);
+            // kt = confirm("ban co muon tiep tuc khong");
+        // }while(kt);
+
+        while(kt){
+            var number1 = prompt("Nhap gia tri number1");
+            var number2 = prompt("Nhap gia tri number2");
+            soLonSoBe(number1,number2);
+            kt = confirm("ban co muon tiep tuc khong");
+        }
+
+        var arr = [1,2.3,4,"khoa" , "hoc",true];
+        for(let i=0;i<arr.length;i++);{
+            console.log(arr[i]);
+        }
+
+        var a = 10;
+        console.log("a:",a);
+        console.log("++a:",a);
+        console.log("a:",a);
+        console.log("a++:",a);
+        console.log("a:",a);
+        var b = a++;
+        // b = a++
+        console.log(b);
+    </script>
+</body>
+</html>
